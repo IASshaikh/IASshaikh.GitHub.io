@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>VBATechnicalDocumentation</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <html>
+  <head>
+<title>Technical Documentatin</title>
+  </head>
+  <body>
+    
+  <div class="main-body">
+      
+  <nav class="navbar" id="navbar">
+    <header>VBA Technical Documentation</header>
+    <ul>
+      <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+      <li><a href="#Visual_Basic_for_Application_VBA" class="nav-link">Visual Basic for Application VBA</a></li>
+      <li><a href="#Recording_Macros" class="nav-link">Recording Macros</a></li>
+      <li><a href="#VBA_Code_to_connect_SQL_Server" class="nav-link">VBA Code to connect SQL Server</a></li>
+      <li><a href="#Code_to_Navigate_to_url_in_IE_Browser_in_VBA" class="nav-link">Code to Navigate to url in IE Browser in VBA</a></li>
+      <li><a href="#Code_to_click_on_Browser_link_in_VBA" class="nav-link">Code to click on Browser link in VBA</a></li>
+      <li><a href="#Other_Information_of_VBA" class="nav-link">Other Information of VBA</a></li>
+    </ul>
+  </nav>
+    
+    <main id="main-doc">
+  <section id="Introduction" class="main-section">
+ 
+    <header>Introduction</header>
+    <p>This Technical documentation Covers the VB Excel Macro and crawkers Creation Techniques</p>
+       
+      </section>
+      <section id="Visual_Basic_for_Application_VBA" class="main-section">
+        
+    <header>Visual Basic for Application VBA</header>
+    <p>Microsoft Visual Basic for Applications (VBA) is the version of Visual Basic that ships with Microsoft Office. In Microsoft Office 2010, VBA includes language features that enable VBA code to run correctly in both 32-bit and 64-bit environments.</p>
+      
+ 
+    
+    </section>
+                 <section id="Recording_Macros" class="main-section">
+        
+    <header>Recording Macros</header>
+    <p>Recording a macro means that you can record a task in Excel using the keyboard and mouse and then play the recording back whenever you need to perform the task.</p>
+                   <p>
+                     Macros are created using VBA (Visual Basic for Applications) code.  Whenever you record a macro, the code is automatically created for you.  However, recording macros does create a lot of unnecessary code.
+                   </p>
+                   <p>You can store your macros in:</p>
+                   <p>1. This Workbook</p>
+                   <p>2. New Workbook</p>
+                   <p>3. Personal Macro Workbook (Personal.xls/xlsm/xlsb)</p>
+                   <p>Personal.xls/xlsm/xlsb is a hidden workbook, which is open in memory.  This means that you can use macros stored in Personal.xls/xlsm/xlsb any time you open Excel.  Macros stored in the other 2 locations are only available in the one workbook.
+
+There two modes when recording a macro:</p>
+                   <p><h4>Absolute Macros</h4></p>
+      <p>The following example will record a macro to put your company name and address into the cells A1, A2, A3, A4 and A5.  This is called an Absolute Macro because it specifies which cells are to be used.</p>
+      <p>1. Create a new blank workbook.</p>
+      <p>2. Click on the Developer tab (make sure Use Relative References is pressed up).</p>
+      <p>3. Click Record Macro icon.</p>
+      <p>4. Type in a name for the Macro e.g. Absolute
+
+Enter a Shortcut Key, if required, e.g. Ctrl + e
+
+Select where you would like to store the Macro e.g. This Workbook
+
+Type in a description for the macro, e.g. 
+Macro to place company name and address into cells A1:A5.</p>
+      <code>
+      <p>5. Click on OK.</p>
+      <p>6.  Now record the macro.
+
+Click on A1<br>
+
+Type “Company Name”<br>
+
+Click on A2<br>
+
+Type “Address 1”<br>
+
+Click on A3<br>
+
+Type “Address 2”<br>
+
+Click on A4<br>
+
+Type “Address 3”<br>
+
+Click on A5<br>
+
+Type “Postcode”<br>
+
+Click back on A1<br></p>
+      <p>7. Click on the Stop Recording button.</p>
+      <p>8. Now try out the macro on Sheet 2.<br>Click anywhere on the sheet and use the keystroke Ctrl + e.
+        <br>This places the company name and address into A1:A5 from anywhere within the sheet. <br></code>
+        Therefore, this is called an Absolute Macro.<br>
+        
+      </p>
+      <h4>Relative Macros</h4>
+      <p>The following example will record a macro to put your company name and address into the ActiveCell and the 4 cells beneath it.  This is called a Relative Macro because the cells which are to be used are determined by the ActiveCell.</p>
+      <p>1. Create a new blank workbook (if necessary).</p>
+      <p>2. Click on the Developer tab (make sure Use Relative References is pressed down).</p>
+      <p>3. Click Record Macro icon.</p>
+      <p>4. Type in a name for the Macro e.g. Relative<br>
+        Enter a Shortcut Key, if required, e.g. Ctrl + h<br>Select where you would like to store the Macro e.g. This Workbook<br>
+        Type in a description for the macro, e.g. Macro to place company name and address into the active cell. <br>
+      <p>5. Click on OK.</p>
+      <p>6. Now record the macro.<br>
+        Click on A1 (i.e. the ActiveCell)<br>
+        Type “Company Name”<br>
+        Click on A2<br>
+        Type “Address 1”<br>
+        Click on A3<br>
+        Type “Address 2”<br>
+        Click on A4<br>
+        Type “Address 3”<br>
+        Click on A5<br>
+        Type “Address 4”<br>
+        Click back on A1<br>
+      </p>
+      <p>7. Click on the Stop Recording button.</p>
+      <p>8. Now try out the macro on Sheet 3.<br>
+        Click anywhere on the sheet and use the keystroke Ctrl + h.<br>
+        This places the company name, address and phone number into the ActiveCell and the 4 cells beneath it. <br>
+        Therefore, this is called a Relative Macro.<br>
+      </p>
+        
+        
+      </p>
+    </section>
+  <section id="VBA_Code_to_connect_SQL_Server" class="main-section">
+    <header>VBA Code to connect SQL Server</header>
+    <p><code>Private Sub SQLbtn_Click()<br>
+    
+      
+      <code>Dim conn As ADODB.Connection</code>
+      <code>Dim rs As ADODB.Recordset</code>
+<code>Dim sConnString As String</code>
+ 
+' Create the connection string.
+ <code>
+sConnString = &quot;Provider=SQLOLEDB;&quot; &amp; _
+&quot;Data Source=&quot;Server Address&quot;;&quot; &amp; _
+&quot;Initial Catalog=&quot;Database name&quot;;&quot; &amp; _
+&quot;user ID=&quot;your id&quot;;&quot; &amp; _
+&quot;password=&quot;your password&quot;;&quot;</code><br>
+ 
+  <code>' Create the Connection and Recordset objects.</code>
+   <code>Set conn = New ADODB.Connection</code>
+   <code>Set rs = New ADODB.Recordset</code>
+ 
+  ' Open the connection and execute.<br>
+  <code>conn.Open sConnString</code>
+  <code>Set rs = conn.Execute(&quot;SELECT * FROM dbo.ODBC_RunHistory;&quot;)</code>
+ 
+' Check if we have data.<br>
+If Not rs.EOF Then<br>
+' Transfer result.<br>
+Sheets(1).Range(&quot;A4&quot;).CopyFromRecordset rs<br>
+' Close the recordset<br>
+rs.Close<br>
+Else<br>
+MsgBox &quot;Error: No records returned.&quot;, vbCritical<br>
+End If<br>
+ 
+   ' Clean up</br>
+If CBool(conn.State And adStateOpen) Then <br>
+   conn.Close<br>
+Set conn = Nothing<br>
+Set rs = Nothing<br>
+ 
+End Sub<br>
+    </code>
+    </p>
+  </section>
+      <section id="Code_to_Navigate_to_url_in_IE_Browser_in_VBA" class="main-section">
+        <header>Code to Navigate to url in IE Browser in VBA</header>
+        <code>
+        <code>
+          Dim ie As InternetExplorer</code><br>
+        <code>Dim url As String</code><br>
+ 
+<code>Set ie = New InternetExplorer</code><br>
+        <code>url = "https://erimranblog.wordpress.com/";</code><br>
+        <code>ie.Visible = True</code><br>
+        <code>ie.navigate url</code><br>
+        </code>
+       
+      </section>
+      <section id="Code_to_click_on_Browser_link_in_VBA" class="main-section">
+        <header>Code to click on Browser link in VBA</header>
+        <code>
+          Dim link As MSHTML.HTMLAnchorElement<br>
+ 
+For Each link In doc.Links<br>
+If Trim(link.innerText) = "link innertext in source code" Then<br>
+link.Click<br>
+Exit For<br>
+End If<br>
+Next<br>
+        </code>
+      </section>
+<section id="Other_Information_of_VBA" class="main-section">
+  <header>Other Information of VBA</header>
+  <ul>
+    <li><a href="https://erimranblog.wordpress.com/">VBA Blog</a></li>
+    <li><a href="https://www.tutorialspoint.com/vba/vba_overview.htm">VBA Tutorial</a></li>
+    <li>Practive VLookup</li>
+    <li>Practice Crawlers</li>
+    <li>Practice HTML</li>
+  </ul>
+</section>
+    </main>
+     
+    </div>
+  </body>
+</html>
+ <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  
+  
+
+</body>
+
+</html>
